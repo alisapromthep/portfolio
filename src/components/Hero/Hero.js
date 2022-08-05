@@ -66,7 +66,12 @@ const Hero = () => {
             direction="row"
             >
                 <Grid item xs={6}>
-                    <Typography variant='h3'>Hi! I'm Alisa Promthep</Typography>
+                    <Typography variant='h1'
+                    sx={{
+                        fontSize: '3rem',
+                        fontWeight: '700',
+                    }}
+                    >Hi! I'm Alisa Promthep</Typography>
                     <Typography>{`I'm a ${text}`}</Typography>
                     <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit felis ut nibh egestas, tempus sagittis est varius. Quisque neque lectus, tincidunt a rutrum eu, condimentum nec odio.</Typography>
                     <Button

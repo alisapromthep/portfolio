@@ -12,5 +12,5 @@ export const HeroImage = styled("img")(({ src, theme }) => ({
         width: "320px",
         height: "300px",
     },
-    animation: `${bouncing} 3s linear infinite`,
+    animation: `${bouncing} 5s linear infinite`,
     }));
