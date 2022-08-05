@@ -1,19 +1,13 @@
 import React from 'react';
 import { Typography, Container, ImageList,ImageListItem } from '@mui/material';
 import {iconData} from '../../data/iconData';
-
+import Title from '../Title/Title';
 
 const Skills = () => {
 
     return (
     <Container>
-        <Typography variant='h2'
-        align='center'
-        sx={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-        }}
-        >Tech Stack</Typography>
+        <Title title="Tech Stack"/>
         <ImageList
         cols={6}
         >
