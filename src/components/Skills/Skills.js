@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Container, ImageList,ImageListItem } from '@mui/material';
 import {iconData} from '../../data/iconData';
 import Title from '../Title/Title';
+import {TechImg} from './SkillsStyle';
 
 const Skills = () => {
 
@@ -16,11 +17,8 @@ const Skills = () => {
                     return (
                     <ImageListItem
                     key={icon.name}
-                    sx={{
-                        height: '2rem',
-                    }}
                     >
-                        <img
+                        <TechImg
                         src={icon.img}
                         alt={icon.name}
                         />

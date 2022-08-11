@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react';
 import { Container,Grid, Typography, Button } from '@mui/material';
 import HeroImg from '../../assets/img/header-img.svg';
 import { HeroImage } from './HeroStyle';
-import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
-
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 
 const Hero = () => {
 
@@ -56,7 +55,6 @@ const Hero = () => {
 
     return (
         <Container 
-        maxWidth='xl'
         sx={{
             padding: '4rem 0',
         }}
@@ -78,10 +76,10 @@ const Hero = () => {
                     onClick={()=>{}}
                     >
                         Let's connect
-                        < ArrowCircleRightOutlinedIcon/>
+                        < FlightTakeoffIcon />
                     </Button>
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={6}>
                     <HeroImage src={HeroImg}/>
                 </Grid>
             </Grid>
