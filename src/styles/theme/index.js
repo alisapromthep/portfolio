@@ -1,19 +1,13 @@
-import { Link } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 
-const Colors = {
-    primary:"#339989",
-    secondary:"#a0cfd3",
-    
-}
 
 const theme =createTheme({
     palette: {
         primary:{
-            main: Colors.primary
+            main: "#133184"
         },
         secondary: {
-            main: Colors.secondary
+            main: '#FF9770'
         }
     },
 
@@ -29,18 +23,24 @@ const theme =createTheme({
         MuiButton: {
             defaultProps: {
                 disableRipple: true,
+                color: 'secondary'
             }
         },
 
         MuiLink: {
             defaultProps: {
                 underline: 'none',
-                color: 'primary',
+                color: 'secondary',
             }
         },
         MuiListItem: {
             defaultProps: {
                 color:'primary',
+            }
+        },
+        MuiImageList: {
+            defaultProps: {
+                display: 'flex',
             }
         }
     }

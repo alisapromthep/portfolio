@@ -1,10 +1,10 @@
 import React from 'react'
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery, AppBar, Toolbar, Container, Typography, Box, Button, Link, ListItem, List } from '@mui/material';
-import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState, useEffect } from 'react';
+import apLogo from '../../assets/logo/ap.png';
 
 
 const NavBar = () => {
@@ -28,24 +28,7 @@ const NavBar = () => {
         <AppBar position="static" className={scrolled? "scrolled": ""}>
             <Container>
                 <Toolbar>
-                    <AirplaneTicketIcon sx={{ display: "flex", mr: 1 }}/>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                        mr: 2,
-                        display: "flex",
-                        fontFamily: 'monospace',
-                        fontWeight: 700,
-                        letterSpacing: '.3rem',
-                        color: 'primary',
-                        textDecoration: 'none',
-                        }}
-                    >
-                        Alisa
-                    </Typography>
+                    <img src={apLogo} alt="a.p. with orange background"/>
                     <List
                     sx={{
                         display: 'flex'

@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { bouncing } from '../../animation/HeroAnimation';
+import { bouncing } from './HeroAnimation';
 
 export const HeroImage = styled("img")(({ src, theme }) => ({
     src: `url(${src})`,
