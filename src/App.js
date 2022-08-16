@@ -3,7 +3,6 @@ import { Container, ThemeProvider } from '@mui/material';
 import theme from "./styles/theme/index";
 import NavBar from './components/NavBar/NavBar';
 import Banner from './components/Hero/Hero';
-import AboutMe from './components/AboutMe/AboutMe';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import ConnectForm from './components/ConnectForm/ConnectForm';
@@ -21,7 +20,6 @@ function App() {
       >
         <NavBar/>
         <Banner/>
-        <AboutMe/>
         <Skills/>
         <Projects/>
         <ConnectForm/>

@@ -11,7 +11,7 @@ const Hero = () => {
     //whether the word is getting type or delete
     const [isDeleting, setIsDeleting] = useState(false);
     //list of words getting typed out
-    const toRotate = ["Developer", "Artist", "former Chemist"];
+    const toRotate = [" a Developer.", " an Artist.", "a former Chemist.", "a Lifelong Learner."];
     const [text, setText] = useState('');
     const [index, setIndex] = useState(1);
     const [delta, setDelta] = useState(300 - Math.random() * 100);
@@ -70,8 +70,9 @@ const Hero = () => {
                         fontWeight: '700',
                     }}
                     >Hi! I'm Alisa Promthep</Typography>
-                    <Typography>{`I'm a ${text}`}</Typography>
-                    <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit felis ut nibh egestas, tempus sagittis est varius. Quisque neque lectus, tincidunt a rutrum eu, condimentum nec odio.</Typography>
+                    <Typography>{`I'm ${text}`}</Typography>
+                    <Typography>Full-stack web developer, with a passion for art and design and the love for databases.</Typography>
+                    <Typography display="block"></Typography>
                     <Button
                     onClick={()=>{}}
                     >

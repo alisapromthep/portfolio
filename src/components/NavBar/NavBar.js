@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import { useMediaQuery, AppBar, Toolbar, Container, Typography, Box, Button, Link, ListItem, List } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { useState, useEffect } from 'react';
 import apLogo from '../../assets/logo/ap.png';
 
@@ -35,9 +36,6 @@ const NavBar = () => {
                     }}
                     >
                         <ListItem>
-                            <Link href="#home">About Me</Link>
-                        </ListItem>
-                        <ListItem>
                             <Link href="#skills">Skills</Link>
                         </ListItem>
                         <ListItem>
@@ -49,7 +47,7 @@ const NavBar = () => {
                     </List>
                     <Box
                     sx={{
-                        display: "flex"
+                        display: "flex",
                     }}
                     >
                         <Link
@@ -67,6 +65,14 @@ const NavBar = () => {
                         color="inherit"
                         >
                             <GitHubIcon/>
+                        </Link>
+                        <Link
+                        href="https://instagram.com/chemists_freetime"
+                        target="_blank"
+                        rel="noopener"
+                        color="inherit"
+                        >
+                            <InstagramIcon/>
                         </Link>
                     </Box>
 

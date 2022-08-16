@@ -1,28 +1,20 @@
 import { styled } from "@mui/material/styles";
-import { CardMedia, CardContent, Box } from "@mui/material";
-import {slide_right} from './ProjectAnimation';
+import { CardMedia, CardContent, CardActionArea, Link} from "@mui/material";
+import {slide_up} from './ProjectAnimation';
 
 
 export const ProjectImg = styled(CardMedia)(({ src, theme }) => ({
-    padding: "0 1rem",
-    width: "40rem",
-    background: 'transparent',
+    height: "35rem",
+    "&:hover .project__detail": {
+        animation: `${slide_up} 2s ease-in-out`,
+        left:'20rem',
+        cursor: "pointer",
+        height:"10rem",
+    }
 }));
 
-export const ProjectContainer = styled(CardContent)({
-    width: "30rem",
-    height: "40rem",
-    padding: "0 1rem",
-    color: 'white',
-    position: 'absolute',
-    bottom: '0.5rem',
-    left: '12rem',
-    backgroundColor: 'lightblue',
-    animation: `${slide_right}`,
-    transition: `2s ease-in-out`,
-    
-    '&:hover':{
-        left:'40rem',
-        cursor: "pointer",
-    }
-});
+
+export const ProjectDetail = styled(CardActionArea)({
+    height: "2rem",
+
+})
