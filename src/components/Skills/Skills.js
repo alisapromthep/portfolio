@@ -1,32 +1,55 @@
 import React from 'react';
-import { Typography, Container, ImageList,ImageListItem } from '@mui/material';
+import { Typography, Container, ImageList,ImageListItem, Box } from '@mui/material';
 import {iconData} from '../../data/iconData';
 import Title from '../Title/Title';
-import {TechImg} from './SkillsStyle';
+import {TechImg, ImageContainer, ImageBox} from './SkillsStyle';
 
 const Skills = () => {
 
     return (
     <Container>
         <Title title="Tech Stack"/>
-        <ImageList
-        cols={6}
+        <Box
+        elementType="div"
+        sx={{
+            position: "relative",
+            width: "100%",
+            overflow: "hidden",
+        }}
         >
-            {
-                iconData.map((icon)=>{
-                    return (
-                    <ImageListItem
-                    key={icon.name}
-                    >
-                        <TechImg
-                        src={icon.img}
-                        alt={icon.name}
-                        />
-                    </ImageListItem>
-                    )
-                })
-            }
-        </ImageList>
+            <ImageContainer
+            gap={10}
+            >
+                {
+                    iconData.map((icon)=>{
+                        return (
+                        <ImageBox
+                        key={icon.name}
+                        >
+                            <TechImg
+                            src={icon.img}
+                            alt={icon.name}
+                            />
+                        </ImageBox>
+                        )
+                    })
+                }
+                            {
+                    iconData.map((icon)=>{
+                        return (
+                        <ImageBox
+                        key={icon.name}
+                        >
+                            <TechImg
+                            src={icon.img}
+                            alt={icon.name}
+                            />
+                        </ImageBox>
+                        )
+                    })
+                }
+            </ImageContainer>
+        </Box>
     </Container>
     )
 }
