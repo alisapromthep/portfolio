@@ -1,9 +1,7 @@
 import React from 'react'
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery, AppBar, Toolbar, Container, Typography, Box, Button, Link, ListItem, List } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import MyLinks from '../MyLinks/MyLinks';
 import { useState, useEffect } from 'react';
 import apLogo from '../../assets/logo/ap.png';
 
@@ -45,38 +43,7 @@ const NavBar = () => {
                             <Link hred="#resume">Resume</Link>
                         </ListItem>
                     </List>
-                    <Box
-                    sx={{
-                        display: "flex",
-                    }}
-                    >
-                        <Link
-                        href="https://www.linkedin.com/in/alisa-promthep/"
-                        target="_blank"
-                        rel="noopener"
-                        color="inherit"
-                        >
-                            <LinkedInIcon/>
-                        </Link>
-                        <Link
-                        href="https://github.com/alisapromthep"
-                        target="_blank"
-                        rel="noopener"
-                        color="inherit"
-                        >
-                            <GitHubIcon/>
-                        </Link>
-                        <Link
-                        href="https://instagram.com/chemists_freetime"
-                        target="_blank"
-                        rel="noopener"
-                        color="inherit"
-                        >
-                            <InstagramIcon/>
-                        </Link>
-                    </Box>
-
-
+                    <MyLinks/>
                 </Toolbar>
             </Container>
         </AppBar>

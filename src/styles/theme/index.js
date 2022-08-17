@@ -1,17 +1,34 @@
 import { createTheme } from "@mui/material/styles";
+import LilitaOneWoff from '../../assets/font/LilitaOne.woff';
+import LilitaOneWoff2 from '../../assets/font/LilitaOne.woff2';
 
 
 const theme =createTheme({
     palette: {
         primary:{
-            main: "#7594EB"
+            main: "#1C4AC6"
         },
         secondary: {
-            main: '#FF9770'
+            main: '#7594EB'
         }
     },
 
+    typography: {
+        frontFamily: 'LilitaOne',
+    },
+
     components: {
+        MuiCssBaseline:{
+            styleOverrides: `
+            @font-face {
+                font-family: 'Lilita One';
+                src: local('Lilita One'), url(${LilitaOneWoff2}) format('woff2'),
+                    url(${LilitaOneWoff}) format('woff');
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }`
+        },
         MuiAppBar: {
             defaultProps: {
                 color: 'transparent',
@@ -23,14 +40,14 @@ const theme =createTheme({
         MuiButton: {
             defaultProps: {
                 disableRipple: true,
-                color: 'secondary'
+                color: 'primary'
             }
         },
 
         MuiLink: {
             defaultProps: {
                 underline: 'none',
-                color: 'secondary',
+                color: 'primary',
             }
         },
         MuiListItem: {

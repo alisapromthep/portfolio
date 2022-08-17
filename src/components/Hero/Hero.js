@@ -4,8 +4,12 @@ import { Container,Grid, Typography, Button } from '@mui/material';
 import HeroImg from '../../assets/img/header-img.svg';
 import { HeroImage } from './HeroStyle';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import ConnectForm from '../ConnectForm/ConnectForm';
 
 const Hero = () => {
+
+    //lets connect pop up 
+    const [contactOpen, setContactOpen] = useState(false);
 
     const [loopNum, setLoopNum] = useState(0);
     //whether the word is getting type or delete
@@ -54,37 +58,46 @@ const Hero = () => {
     }
 
     return (
-        <Container 
-        sx={{
-            padding: '4rem 0',
-        }}
-        >
-            <Grid
-            container
-            direction="row"
+        <div>
+            {contactOpen && <ConnectForm
+                contactOpen={contactOpen}
+                setContactOpen={setContactOpen}/>}
+
+            <Container 
+            sx={{
+                padding: '4rem 0',
+            }}
             >
-                <Grid item xs={6}>
-                    <Typography variant='h1'
-                    sx={{
-                        fontSize: '3rem',
-                        fontWeight: '700',
-                    }}
-                    >Hi! I'm Alisa Promthep</Typography>
-                    <Typography>{`I'm ${text}`}</Typography>
-                    <Typography>Full-stack web developer, with a passion for art and design and the love for databases.</Typography>
-                    <Typography display="block"></Typography>
-                    <Button
-                    onClick={()=>{}}
-                    >
-                        Let's connect
-                        < FlightTakeoffIcon />
-                    </Button>
+                <Grid
+                container
+                direction="row"
+                >
+                    <Grid item xs={6}>
+                        <Typography variant='h1'
+                        sx={{
+                            fontSize: '3rem',
+                            fontWeight: '700',
+                        }}
+                        >Hi! I'm Alisa Promthep</Typography>
+                        <Typography>{`I'm ${text}`}</Typography>
+                        <Typography>Full-stack web developer, with a passion for art and design and the love for databases.</Typography>
+                        <Typography display="block"></Typography>
+                        <Button
+                        variant="outlined"
+                        endIcon={<FlightTakeoffIcon/>}
+                        onClick={()=>{
+                            setContactOpen(true);
+                        }}
+                        >
+                            Let's connect
+                        </Button>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <HeroImage src={HeroImg}/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={6}>
-                    <HeroImage src={HeroImg}/>
-                </Grid>
-            </Grid>
-        </Container>
+            </Container>
+        </div>
     )
 }
 
