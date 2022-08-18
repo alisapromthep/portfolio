@@ -30,24 +30,15 @@
     }
 
     &__techimg {
-        width: 2rem;
+        width: 2.2rem;
     }
 
     &__cover {
         width: 45.75rem;
         height: 25rem;
-        background-color: white;
-
-        &hover {
-            /* From https://css.glass */
-            background: rgba(113, 116, 227, 0.6);
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(6.8px);
-            -webkit-backdrop-filter: blur(6.8px);
-            border: 1px solid rgba(113, 116, 227, 1);
-            
-        }
+        position: absolute;
+        top:0%;
+        border-radius: 2rem;
     }
 
     &__container {
@@ -58,13 +49,25 @@
 
         &:hover .project__label{
             animation: fade_in_bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
-            height: 12rem;
+            height: 15rem;
+            background: rgba(113, 116, 227, 0.9);
+            
 
         }
 
         &:hover .project__detail {
             visibility: visible;
             opacity:1;
+        }
+
+        &:hover .project__cover {
+            /* From https://css.glass */
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+        
+
         }
     }
 }

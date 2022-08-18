@@ -2,9 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Container,Grid, Typography, Button } from '@mui/material';
 import HeroImg from '../../assets/img/header-img.svg';
-import { HeroImage } from './HeroStyle';
+import { HeroImage, HeroButton } from './HeroStyle';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import ConnectForm from '../ConnectForm/ConnectForm';
+
 
 
 const Hero = () => {
@@ -84,12 +85,13 @@ const Hero = () => {
                         sx={{
                             fontSize: '3rem',
                             fontWeight: '700',
+                            textShadow: " 2px 2px 0 #1E2CAB"
                         }}
                         >Hi! I'm Alisa Promthep</Typography>
                         <Typography>{`I'm ${text}`}</Typography>
                         <Typography>Full-stack web developer, with a passion in exploring art and design and the love for databases.</Typography>
                         <Typography display="block"></Typography>
-                        <Button
+                        <HeroButton
                         variant="contained"
                         endIcon={<FlightTakeoffIcon/>}
                         onClick={()=>{
@@ -97,7 +99,7 @@ const Hero = () => {
                         }}
                         >
                             Let's connect
-                        </Button>
+                        </HeroButton>
                     </Grid>
                     <Grid item xs={6}>
                         <HeroImage src={HeroImg}/>

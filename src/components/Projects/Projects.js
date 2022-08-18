@@ -1,9 +1,9 @@
 import React from 'react';
 import './Projects.scss';
 import Title from '../Title/Title';
-import {Container, Typography, CardContent, Stack, Card, CardMedia, Button, CardActions, CardActionArea, Box, Link , List, ListItem} from '@mui/material';
+import {Container, Typography, CardContent, Stack, Card, List} from '@mui/material';
 import {projectData} from '../../data/projectData.js';
-import {ProjectImg, ProjectButton} from './ProjectsStyle';
+import {ProjectImg, ProjectButton, ProjectTech} from './ProjectsStyle';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 
 
@@ -29,19 +29,22 @@ const Projects = () => {
                         }}
                         >   
                         <div className="project__cover">
-                                <ProjectImg
-                                component="img"
-                                image={project.img}
-                                alt={project.description}
-                                />
                             </div>
+                            <ProjectImg
+                            component="img"
+                            image={project.img}
+                            alt={project.description}
+                            />
                             <CardContent
                             className='project__label'
                             >
-                                    <Typography sx={{fontWeight:"700"}}>
+                                    <Typography 
+                                    color="white"
+                                    sx={{fontWeight:"700"}}>
                                         {project.name}
                                     </Typography>
-                                    <Typography>
+                                    <Typography
+                                    color="white">
                                         {project.description}
                                     </Typography>
                                     <div className='project__detail'>
@@ -50,13 +53,12 @@ const Projects = () => {
                                     >
                                         {project.techstack.map((tech,index)=>{
                                             return (
-                                                <ListItem
-                                                alignItems='flex-start'
+                                                <ProjectTech
                                                 key={index}
                                                 >
                                                     <img src={tech}
                                                     className="project__techimg"/>
-                                                </ListItem>
+                                                </ProjectTech>
                                             )
                                         })
                                     }

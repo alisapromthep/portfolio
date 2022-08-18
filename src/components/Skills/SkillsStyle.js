@@ -12,7 +12,7 @@ export const TechImg = styled("img")(({src, theme})=>({
 }))
 
 export const ImageBox = styled(ImageListItem)({
-    width: "100%",
+    width: "4rem",
     margin: "1rem 0.2rem",
     backgroundColor: "white",
     backgroundImage: "linear-gradient(top, #f4f1ee, #fff)",
@@ -27,6 +27,6 @@ export const ImageContainer = styled(ImageList)({
     width: "200%", 
     position: "inherit",
     left: "0",
-    animation: `${marquee} 20s linear infinite`,
+    animation: `${marquee} 35s linear infinite`,
 })
 

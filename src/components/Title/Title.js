@@ -11,6 +11,7 @@ const Title = ({title}) => {
             fontSize: '2.5rem',
             fontWeight: '700',
             marginTop: '2rem',
+            textShadow: " 1.5px 1.5px 0 #1E2CAB",
         }}
         >{title}</Typography>
     )

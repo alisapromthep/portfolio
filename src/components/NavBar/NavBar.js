@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import { useMediaQuery, AppBar, Toolbar, Container, Typography, Box, Button, Link, ListItem, List } from '@mui/material';
 import MyLinks from '../MyLinks/MyLinks';
 import { useState, useEffect } from 'react';
-import apLogo from '../../assets/logo/ap.png';
+import apLogo from '../../assets/logo/apb.png';
 import './NavBar.scss';
 
 const NavBar = () => {
@@ -22,6 +22,10 @@ const NavBar = () => {
 
         return () => window.removeEventListener("scrolled", onScroll);
     }, [])
+
+    const newEntry = React.createRef();
+    
+    
 
     return (
         <AppBar position="static" className={scrolled? "scrolled": ""}>
