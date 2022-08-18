@@ -4,7 +4,7 @@ import { useMediaQuery, AppBar, Toolbar, Container, Typography, Box, Button, Lin
 import MyLinks from '../MyLinks/MyLinks';
 import { useState, useEffect } from 'react';
 import apLogo from '../../assets/logo/ap.png';
-
+import './NavBar.scss';
 
 const NavBar = () => {
 
@@ -26,24 +26,27 @@ const NavBar = () => {
     return (
         <AppBar position="static" className={scrolled? "scrolled": ""}>
             <Container>
-                <Toolbar>
-                    <img src={apLogo} alt="a.p. with orange background"/>
-                    <List
-                    sx={{
-                        display: 'flex'
-                    }}
-                    >
-                        <ListItem>
-                            <Link href="#skills">Skills</Link>
-                        </ListItem>
-                        <ListItem>
-                            <Link href="#projects">Projects</Link>
-                        </ListItem>
-                        <ListItem>
-                            <Link hred="#resume">Resume</Link>
-                        </ListItem>
-                    </List>
-                    <MyLinks/>
+                <Toolbar className="navbar__container">
+                    <img src={apLogo} alt="a.p. with orange background"
+                    className="navbar__logo"/>
+                    <div className="navbar__right">
+                        <List
+                        sx={{
+                            display: 'flex'
+                        }}
+                        >
+                            <ListItem>
+                                <Link href="#skills">Skills</Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="#projects">Projects</Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link hred="#resume">Resume</Link>
+                            </ListItem>
+                        </List>
+                        <MyLinks/>
+                    </div>
                 </Toolbar>
             </Container>
         </AppBar>

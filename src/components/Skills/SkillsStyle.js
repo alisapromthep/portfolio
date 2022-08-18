@@ -14,6 +14,7 @@ export const TechImg = styled("img")(({src, theme})=>({
 export const ImageBox = styled(ImageListItem)({
     width: "100%",
     margin: "1rem 0.2rem",
+    backgroundColor: "white",
     backgroundImage: "linear-gradient(top, #f4f1ee, #fff)",
     borderRadius:"1rem",
     boxShadow: "0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5)",

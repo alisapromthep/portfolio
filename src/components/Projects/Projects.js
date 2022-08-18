@@ -1,10 +1,9 @@
 import React from 'react';
 import './Projects.scss';
 import Title from '../Title/Title';
-import {Container, Typography, CardContent, Stack, Card, CardMedia, Button, CardActions, CardActionArea, Box, Link } from '@mui/material';
-// import Carousel from 'react-material-ui-carousel';
+import {Container, Typography, CardContent, Stack, Card, CardMedia, Button, CardActions, CardActionArea, Box, Link , List, ListItem} from '@mui/material';
 import {projectData} from '../../data/projectData.js';
-import {ProjectImg, ProjectDetail} from './ProjectsStyle';
+import {ProjectImg, ProjectButton} from './ProjectsStyle';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 
 
@@ -13,8 +12,9 @@ const Projects = () => {
     <Container>
         <Title title="Projects" />
         <Stack
+        spacing={4}
         sx={{
-            padding: '1rem 4rem',
+            padding: "1rem 4rem",
         }}>
                 {
                 projectData.map((project)=>{
@@ -22,39 +22,54 @@ const Projects = () => {
                         <Card
                         key={project.id}
                         className='project__container'
-                        elevation= {0}
+                        elevation= {2}
                         sx={{
-                            position: 'relative',
-                            padding: '2rem 0'
+                            borderRadius: "2rem",
+                            position: "relative",
                         }}
-                        >
-                            <ProjectImg
-                            component="img"
-                            image={project.img}
-                            alt={project.description}
-                            />
+                        >   
+                        <div className="project__cover">
+                                <ProjectImg
+                                component="img"
+                                image={project.img}
+                                alt={project.description}
+                                />
+                            </div>
                             <CardContent
                             className='project__label'
                             >
-                                    <Typography>
+                                    <Typography sx={{fontWeight:"700"}}>
                                         {project.name}
                                     </Typography>
-                                    <div className='project__detail'>
                                     <Typography>
                                         {project.description}
                                     </Typography>
-                                    <Typography>
-                                        {`Technology: ${project.techstack}`}
-                                    </Typography>
+                                    <div className='project__detail'>
+                                    <List
+                                    sx={{display: "flex"}}
+                                    >
+                                        {project.techstack.map((tech,index)=>{
+                                            return (
+                                                <ListItem
+                                                alignItems='flex-start'
+                                                key={index}
+                                                >
+                                                    <img src={tech}
+                                                    className="project__techimg"/>
+                                                </ListItem>
+                                            )
+                                        })
+                                    }
+                                    </List>
                                         {project.links.map((link)=>{
                                             return (
-                                                <Link
+                                                <ProjectButton
                                                 key={link.name}
                                                 href={link.url}
                                                 variant="button"
                                                 target="_blank"
                                                 rel="noopener">{link.name}
-                                                </Link>
+                                                </ProjectButton>
                                             )
                                         })}
                                     </div>

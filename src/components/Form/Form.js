@@ -3,10 +3,11 @@ import { TextField, Box, Stack,Button } from '@mui/material';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 
 
-const Form = () => {
+const Form = ({handleSubmit}) => {
     return (
         <Box
         component="form"
+        onSubmit={handleSubmit}
         autoComplete="off"
         sx={{
         '& .MuiTextField-root': { m: 1, width: '25ch' },
@@ -17,18 +18,13 @@ const Form = () => {
                 required
                 id="name"
                 label="Name"
-                defaultValue={'Your name'}
+                placeholder={'Your name'}
                 />
                 <TextField
                 required
                 id="email"
                 label="Email"
-                defaultValue={'Your email'}
-                />
-                <TextField
-                id="subjust"
-                label="Subject Line"
-                defaultValue={'Hey! I visited your site...'}
+                placeholder={'Your email'}
                 />
                 <TextField
                 required
@@ -36,14 +32,16 @@ const Form = () => {
                 label="Message"
                 multiline
                 rows={4}
-                defaultValue={'Your message. . . '}
+                placeholder={'Your message. . . '}
                 />
                 <Button variant="outlined" size="small"
                 endIcon={<AirplaneTicketIcon />}
                 sx={{
                     width: "8rem",
                     margin: "0 20%",
-                }}>
+                }}
+                type="submit"
+                >
                     Connect
                 </Button>
             </Stack>

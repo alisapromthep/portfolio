@@ -1,0 +1,31 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(to left top, #1c4ac6, #2250cd, #2855d4, #2e5bdb, #3361e2, #7964de, #a269d8, #c171d2, #e986c0, #fca5b9, #ffc7c3, #ffe8df);
+}
+
+// .canvas {
+//     position: relative;
+// }
+
+// .background {
+//     height: 100vh;
+//     width: 100vw;
+//     position: absolute;
+//     background-color: red;
+//     z-index: -1;
+// }
+
+.page{
+    margin: 2rem 4rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.62);
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    backdrop-filter: blur(6.8px);
+    border-radius:16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0px 2px 1px 1px rgba(255,255,255,.5), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}

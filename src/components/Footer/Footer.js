@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import {Container, Typography} from '@mui/material';
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <Container>
+            <Typography>
+                This portfolio is my exploration of Three.js, material ui, and css animation. 
+            </Typography>
+        </Container>
     )
 }
 

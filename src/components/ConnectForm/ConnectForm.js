@@ -1,28 +1,42 @@
 import React from 'react';
 import Title from '../Title/Title';
 import Form from '../Form/Form';
-import { Container, Box, IconButton } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import MyLinks from '../MyLinks/MyLinks';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import "./ConnectForm.scss";
+import emailjs from 'emailjs-com';
+import FormSubmit from '../FormSubmit/FormSubmit';
 
-const ConnectForm = ({contactOpen, setContactOpen}) => {
+
+const ConnectForm = ({contactOpen, setContactOpen, formSubmit, setFormSubmit, }) => {
+
+    const handleSubmit = (event)=>{
+        event.preventDefault()
+
+        const name = event.target.name.value;
+        const email = event.target.name.value;
+        const message = event.target.name.value;
+
+        const serviceId = `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`;
+        const templateId= `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`;
+        const userId = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`;
+        const templateParams = {
+            name,
+            email,
+            message
+        }
+
+        emailjs.send(serviceId, templateId, templateParams, userId)
+            .then((response)=> setFormSubmit(true) )
+            .catch((err)=>console.log(err))
+    }
+
+
     return (
         <div className="contact">
-            <Container
-            sx={{
-                width:"40rem",
-                zIndex: "2",
-                backgroundColor: "white",
-                position: "absolute",
-                top: "20%",
-                left: "25%",
-                animate: "translateY(20%) 5s linear",
-                border: "solid 1px cornflowerblue",
-                borderRadius: "2rem",
-                backgroundImage: "linear-gradient(top, #f4f1ee, #fff)",
-                boxShadow: "14px 18px 13px 4px rgba(0, 0, 0, .3), inset 0px 5px 4px 4px white, inset 0px -3px 2px 2px rgba(204,198,197,.5)",
-            }}
+            <div
+            className="contact__modalcontainer"
             >
                 <IconButton 
                 color="primary"
@@ -30,10 +44,10 @@ const ConnectForm = ({contactOpen, setContactOpen}) => {
                     setContactOpen(false)
                 }}
                 sx={{
-                    position: "absolute",
-                    top:"-6%",
-                    right:"-4%",
-                    zIndex: "2",
+                    position:"absolute",
+                    top:"1%",
+                    right:"2%",
+                    zIndex:"2",
                 }}>
                     <HighlightOffIcon/>
                 </IconButton>
@@ -43,7 +57,7 @@ const ConnectForm = ({contactOpen, setContactOpen}) => {
                     sx={{
                         display: "flex",
                     }}>
-                        <Form/>
+                        {formSubmit ? <FormSubmit/>:<Form handleSubmit={handleSubmit}/>}
                         <Box
                         className="contact__social"
                         >
@@ -51,7 +65,7 @@ const ConnectForm = ({contactOpen, setContactOpen}) => {
                         </Box>
                     </Box>
                 </div>
-            </Container>
+            </div>
         </div>
     )
 }

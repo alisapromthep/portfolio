@@ -6,10 +6,13 @@ import { HeroImage } from './HeroStyle';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import ConnectForm from '../ConnectForm/ConnectForm';
 
+
 const Hero = () => {
 
     //lets connect pop up 
     const [contactOpen, setContactOpen] = useState(false);
+    //contactofmr 
+    const [formSubmit, setFormSubmit] = useState(false);
 
     const [loopNum, setLoopNum] = useState(0);
     //whether the word is getting type or delete
@@ -61,11 +64,14 @@ const Hero = () => {
         <div>
             {contactOpen && <ConnectForm
                 contactOpen={contactOpen}
-                setContactOpen={setContactOpen}/>}
+                setContactOpen={setContactOpen}
+                formSubmit={formSubmit}
+                setFormSubmit={setFormSubmit}
+                />}
 
-            <Container 
+            <Container
             sx={{
-                padding: '4rem 0',
+                paddingTop: '4rem',
             }}
             >
                 <Grid
@@ -74,16 +80,17 @@ const Hero = () => {
                 >
                     <Grid item xs={6}>
                         <Typography variant='h1'
+                        color='primary'
                         sx={{
                             fontSize: '3rem',
                             fontWeight: '700',
                         }}
                         >Hi! I'm Alisa Promthep</Typography>
                         <Typography>{`I'm ${text}`}</Typography>
-                        <Typography>Full-stack web developer, with a passion for art and design and the love for databases.</Typography>
+                        <Typography>Full-stack web developer, with a passion in exploring art and design and the love for databases.</Typography>
                         <Typography display="block"></Typography>
                         <Button
-                        variant="outlined"
+                        variant="contained"
                         endIcon={<FlightTakeoffIcon/>}
                         onClick={()=>{
                             setContactOpen(true);

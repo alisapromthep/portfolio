@@ -6,7 +6,7 @@ import LilitaOneWoff2 from '../../assets/font/LilitaOne.woff2';
 const theme =createTheme({
     palette: {
         primary:{
-            main: "#1C4AC6"
+            main: "#6A58CA"
         },
         secondary: {
             main: '#7594EB'
@@ -14,7 +14,7 @@ const theme =createTheme({
     },
 
     typography: {
-        frontFamily: 'LilitaOne',
+        frontFamily: 'Lilita One',
     },
 
     components: {

@@ -1,5 +1,6 @@
 import { styled } from "@mui/material/styles";
 import { bouncing } from './HeroAnimation';
+import {Container} from "@mui/material";
 
 export const HeroImage = styled("img")(({ src, theme }) => ({
     src: `url(${src})`,
@@ -14,3 +15,4 @@ export const HeroImage = styled("img")(({ src, theme }) => ({
     },
     animation: `${bouncing} 5s linear infinite`,
     }));
+
