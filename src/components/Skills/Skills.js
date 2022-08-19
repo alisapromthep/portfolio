@@ -15,7 +15,8 @@ const Skills = () => {
             position: "relative",
             width: "100%",
             overflow: "hidden",
-        }}
+
+            }}
         >
             <ImageContainer
             gap={10}

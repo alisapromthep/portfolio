@@ -12,6 +12,8 @@ const Projects = () => {
         <Title title="Projects"/>
         <Stack
         spacing={4}
+        justifyContent="center"
+        alignItems="center"
         sx={{
             padding: {sm:"1rem 4rem"},
         }}>
@@ -49,33 +51,20 @@ const Projects = () => {
                                         {project.description}
                                     </Typography>
                                     <div className='project__detail'>
-                                    <List
-                                    sx={{display: "flex",
-                                overflow: {xs:"scroll", sm:"inherit"}}}
-                                    >
-                                        {project.techstack.map((tech,index)=>{
-                                            return (
-                                                <ProjectTech
-                                                key={index}
-                                                >
-                                                    <img src={tech}
-                                                    className="project__techimg"/>
-                                                </ProjectTech>
-                                            )
-                                        })
-                                    }
-                                    </List>
+                                    <Typography color="white">
+                                        {project.techstack}
+                                    </Typography>
                                     <List
                                     sx={{
-                                        display: {xs:"flex"},
-                                        justifyContent: {sm:"unset"}
+                                        display: "flex",
+                                        justifyContent: "center"
                                     }}
                                     >
                                         {project.links.map((link,index)=>{
                                             return (
                                                 <ListItem
                                                 sx={{
-                                                    width:{sm:"10rem"},
+                                                    maxWidth:{sm:"12rem"},
                                                     height: {sm:"3rem"},
                                                 }}
                                                 key={index}>

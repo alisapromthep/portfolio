@@ -2,28 +2,15 @@ import virtualWanderHome from '../assets/img/virtualWanderHome.png';
 import allergyTrackingHome from '../assets/img/allergyTrackingHome.png';
 import shutterstockHome from '../assets/img/shutterstockHome.png';
 import whosthatpokemonHome from '../assets/img/whosthatpokemonHome.png';
-import cssIcon from '../assets/icons/css-3.svg';
-import expressIcon from '../assets/icons/express.svg';
-import gitIcon from '../assets/icons/git-icon.svg';
-import htmlIcon from '../assets/icons/html-5.svg';
-import jsIcon from '../assets/icons/javascript.svg';
-import muiIcon from '../assets/icons/material-ui.svg';
-import knexIcon from '../assets/icons/knex.svg';
-import mysqlIcon from '../assets/icons/mysql.svg';
-import nodeIcon from '../assets/icons/nodejs-icon.svg';
-import reactIcon from '../assets/icons/react.svg';
-import sassIcon from '../assets/icons/sass.svg';
-import herokuIcon from '../assets/icons/heroku-icon.svg';
-import netlifyIcon from '../assets/icons/netlify.svg';
-import { Javascript } from '@mui/icons-material';
+
 
 export const projectData = [
     {
         "id": 1,
         "name": "Reaction",
         "img": allergyTrackingHome,
-        "description": "Full-stack web application to help people track their allergies or food tolerance.",
-        "techstack": [jsIcon, reactIcon, expressIcon, nodeIcon, knexIcon, mysqlIcon, herokuIcon, netlifyIcon ],
+        "description": "Full-stack web application to help you track your allergies or food intolerance. Incorporating icons, react-calendar and JWT authentication. ",
+        "techstack": "Javascript | React | Sass | Css | NodeJs | Express | KnexJS | MySQL ",
         "links": [
             {
                 "name": "visit site",
@@ -48,7 +35,7 @@ export const projectData = [
         "name": "Shutterstock",
         "img": shutterstockHome,
         "description": "A collaboration between 2 Developers, 3 UX designers and 24 hours.",
-        "techstack": [htmlIcon, cssIcon, jsIcon, reactIcon],
+        "techstack": "Javascript | React | Sass | Css ",
         "links": [
             {
                 "name":"DEMO",
@@ -65,8 +52,8 @@ export const projectData = [
         "id": 3,
         "name": "Virtual Wanderer",
         "img": virtualWanderHome,
-        "description": "24hours pair-programming hackathon created a full stack web application that takes you on a walk or bike through youtube videos pre-picked for you.",
-        "techstack": [ reactIcon, nodeIcon, expressIcon],
+        "description": "24hours pair-programming: This is a full stack web application that takes you wandering through pre-picked youtube videos.",
+        "techstack": "Javascript | React | Sass | Css | NodeJs | Express ",
         "links": [
             {
                 "name": "VISIT SITE",
@@ -84,7 +71,7 @@ export const projectData = [
         "name": "Who's that Pokemon",
         "img": whosthatpokemonHome,
         "description": "24 hours hackathon using Pokemon API and vanila javascript to create whos that pokemon game.",
-        "techstack": [htmlIcon, cssIcon, jsIcon],
+        "techstack": "Javascript | Sass | Css  ",
         "links": [
             {
                 "name": "VISIT SITE",

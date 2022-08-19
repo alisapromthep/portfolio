@@ -17,10 +17,13 @@ body {
     backdrop-filter: blur(6.8px);
     border-radius:16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0px 2px 1px 1px rgba(255,255,255,.5), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    position:relative;
+    left: 5%;
     
     @include tablet{
         margin: 2rem 4rem;
         padding: 1rem;
+        left:auto
 
     }
 }

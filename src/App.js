@@ -20,6 +20,7 @@ function App() {
         >
             <NavBar/>
             <Hero/>
+            <Skills/>
             <Projects/>
             <Footer/>
         </main>

@@ -1,20 +1,25 @@
 import React from 'react'
-import { AppBar, Toolbar, Container, ListItem, Link, List } from '@mui/material';
+import { AppBar, Toolbar, Container, ListItem, Link, List, Typography } from '@mui/material';
 import MyLinks from '../MyLinks/MyLinks';
-import apLogo from '../../assets/logo/apb.png';
 import './NavBar.scss';
 
 
-const NavBar = ({scrollToProject}) => {
+const NavBar = () => {
 
     return (
         <AppBar position="static">
             <Container>
                 <Toolbar 
-                sx={{paddingLeft: "0",}}
                 className="navbar__container">
-                    <img src={apLogo} alt="a.p."
-                    className="navbar__logo"/>
+                    <Typography
+                    color="primary"
+                    sx={{
+                        fontSize: '2rem',
+                        fontWeight: '700',
+                        textShadow: " 1.5px 1.5px 0 #1E2CAB",
+                    }}
+                    
+                    >A.P.</Typography>
                     <div className="navbar__right">
                         <List
                         sx={{

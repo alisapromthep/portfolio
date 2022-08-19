@@ -43,6 +43,11 @@ const theme =createTheme({
             defaultProps: {
                 display: 'flex',
             }
+        },
+        MuiToolbar:{
+            defaultProps:{
+                padding:'0',
+            }
         }
     }
 

@@ -74,6 +74,7 @@ const Hero = () => {
             sx={{
                 paddingTop: '4rem',
                 marginBottom: '2rem',
+                width:{lg:"55rem"}
             }}
             >
                 <Grid
@@ -104,7 +105,7 @@ const Hero = () => {
                             Let's connect
                         </HeroButton>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={4}>
                         <HeroImage src={HeroImg}/>
                     </Grid>
                 </Grid>

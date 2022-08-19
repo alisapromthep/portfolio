@@ -15,6 +15,7 @@
 .project {
     &__detail {
         visibility: hidden;
+        margin-top: 0.5rem;
         opacity:0;
     }
 
@@ -22,7 +23,7 @@
         width: 100%;
         overflow: hidden;
         position: absolute;
-        height: 18rem;
+        height: 16rem;
         bottom: -7rem;
         /* From https://css.glass */
         background: rgba(95, 108, 232, 0.8);
@@ -55,14 +56,18 @@
         position: relative;
         border-radius: 2rem;
 
+        @include desktop{
+            width: 50rem;
+        }
+
 
         &:hover .project__label{
             animation: fade_in_bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
             bottom: -1px;
-            height: 20rem;
+            height: 17rem;
 
             @include tablet {
-                height: 16rem;
+                height: 15rem;
             }
             
 
