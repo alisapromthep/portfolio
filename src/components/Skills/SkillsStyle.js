@@ -23,10 +23,12 @@ export const ImageBox = styled(ImageListItem)({
 
 export const ImageContainer = styled(ImageList)({
     display: "flex",
+    alignItems: "center",
+    justifyContent:"center",
     overflow: "hidden",
-    width: "200%", 
+    width: "100%", 
     position: "inherit",
     left: "0",
-    animation: `${marquee} 40s linear infinite`,
+    //animation: `${marquee} 40s linear infinite`,
 })
 

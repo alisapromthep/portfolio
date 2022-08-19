@@ -35,7 +35,7 @@ const Skills = () => {
                         )
                     })
                 }
-                            {
+                            {/* {
                     iconData.map((icon)=>{
                         return (
                         <ImageBox
@@ -48,7 +48,7 @@ const Skills = () => {
                         </ImageBox>
                         )
                     })
-                }
+                } */}
             </ImageContainer>
         </Box>
     </Container>
