@@ -4,8 +4,8 @@ import {Button} from "@mui/material";
 
 export const HeroImage = styled("img")(({ src, theme }) => ({
     src: `url(${src})`,
-    padding: "0 3rem",
-    width: "20rem",
+    paddingLeft: "4rem",
+    width: "23rem",
     [theme.breakpoints.down("md")]: {
         width: "20rem",
     },

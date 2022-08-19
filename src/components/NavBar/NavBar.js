@@ -1,37 +1,19 @@
 import React from 'react'
-import { useTheme } from '@mui/material/styles';
-import { useMediaQuery, AppBar, Toolbar, Container, Typography, Box, Button, Link, ListItem, List } from '@mui/material';
+import { AppBar, Toolbar, Container, ListItem, Link, List } from '@mui/material';
 import MyLinks from '../MyLinks/MyLinks';
-import { useState, useEffect } from 'react';
 import apLogo from '../../assets/logo/apb.png';
 import './NavBar.scss';
 
-const NavBar = () => {
 
-    const [activeLink, setActiveLink] = useState('home');
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(()=>{
-        const onScroll = ()=>{
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        }
-
-        return () => window.removeEventListener("scrolled", onScroll);
-    }, [])
-
-    const newEntry = React.createRef();
-    
-    
+const NavBar = ({scrollToProject}) => {
 
     return (
-        <AppBar position="static" className={scrolled? "scrolled": ""}>
+        <AppBar position="static">
             <Container>
-                <Toolbar className="navbar__container">
-                    <img src={apLogo} alt="a.p. with orange background"
+                <Toolbar 
+                sx={{paddingLeft: "0",}}
+                className="navbar__container">
+                    <img src={apLogo} alt="a.p."
                     className="navbar__logo"/>
                     <div className="navbar__right">
                         <List
@@ -40,13 +22,10 @@ const NavBar = () => {
                         }}
                         >
                             <ListItem>
-                                <Link href="#skills">Skills</Link>
-                            </ListItem>
-                            <ListItem>
-                                <Link href="#projects">Projects</Link>
-                            </ListItem>
-                            <ListItem>
-                                <Link hred="#resume">Resume</Link>
+                                <Link href="https://docs.google.com/document/d/e/2PACX-1vSE8GB9wynWs1sdh-r0mueZmOwiHMzscNesOOJChC4kMtlIJkeT_kravPNAwASnqcSS1SLA8gimdiZ0/pub"
+                                target="_blank"
+                                rel="noopener"
+                                >Resume</Link>
                             </ListItem>
                         </List>
                         <MyLinks/>

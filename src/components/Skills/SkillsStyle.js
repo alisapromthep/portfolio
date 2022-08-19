@@ -27,6 +27,6 @@ export const ImageContainer = styled(ImageList)({
     width: "200%", 
     position: "inherit",
     left: "0",
-    animation: `${marquee} 35s linear infinite`,
+    animation: `${marquee} 40s linear infinite`,
 })
 

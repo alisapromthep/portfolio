@@ -1,6 +1,7 @@
 import virtualWanderHome from '../assets/img/virtualWanderHome.png';
 import allergyTrackingHome from '../assets/img/allergyTrackingHome.png';
 import shutterstockHome from '../assets/img/shutterstockHome.png';
+import whosthatpokemonHome from '../assets/img/whosthatpokemonHome.png';
 import cssIcon from '../assets/icons/css-3.svg';
 import expressIcon from '../assets/icons/express.svg';
 import gitIcon from '../assets/icons/git-icon.svg';
@@ -14,25 +15,26 @@ import reactIcon from '../assets/icons/react.svg';
 import sassIcon from '../assets/icons/sass.svg';
 import herokuIcon from '../assets/icons/heroku-icon.svg';
 import netlifyIcon from '../assets/icons/netlify.svg';
+import { Javascript } from '@mui/icons-material';
 
 export const projectData = [
     {
         "id": 1,
         "name": "Reaction",
         "img": allergyTrackingHome,
-        "description": "Full-stack tracking web application for allergies and food intolerance.",
-        "techstack": [reactIcon, expressIcon, nodeIcon, knexIcon, mysqlIcon, herokuIcon, netlifyIcon ],
+        "description": "Full-stack web application to help people track their allergies or food tolerance.",
+        "techstack": [jsIcon, reactIcon, expressIcon, nodeIcon, knexIcon, mysqlIcon, herokuIcon, netlifyIcon ],
         "links": [
             {
                 "name": "visit site",
                 "url": "https://track-reaction.netlify.com"
             },
             {
-                "name": "github front-end",
+                "name": "Front-end",
                 "url": "https://github.com/alisapromthep/alisa-promthep-reaction-client"
             },
             {
-                "name": "github back-end",
+                "name": "Back-end",
                 "url": "https://github.com/alisapromthep/alisa-promthep-reaction-server"
             }
         ],
@@ -45,8 +47,8 @@ export const projectData = [
         "id": 2,
         "name": "Shutterstock",
         "img": shutterstockHome,
-        "description": "2 Developers, 3 Ux designers, a challenge problem and 24 hours",
-        "techstack": [htmlIcon, cssIcon, sassIcon, reactIcon],
+        "description": "A collaboration between 2 Developers, 3 UX designers and 24 hours.",
+        "techstack": [htmlIcon, cssIcon, jsIcon, reactIcon],
         "links": [
             {
                 "name":"DEMO",
@@ -63,9 +65,31 @@ export const projectData = [
         "id": 3,
         "name": "Virtual Wanderer",
         "img": virtualWanderHome,
-        "description": "2 Developer, 24hours: A full stack web application that allows you to virtually travel around in different city",
-        "techstack": [htmlIcon, cssIcon, sassIcon, reactIcon, nodeIcon, expressIcon],
+        "description": "24hours pair-programming hackathon created a full stack web application that takes you on a walk or bike through youtube videos pre-picked for you.",
+        "techstack": [ reactIcon, nodeIcon, expressIcon],
         "links": [
+            {
+                "name": "VISIT SITE",
+                "url": "https://virtual-wanderer.netlify.app"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/alisapromthep/virtual-wander"
+            },
+
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Who's that Pokemon",
+        "img": whosthatpokemonHome,
+        "description": "24 hours hackathon using Pokemon API and vanila javascript to create whos that pokemon game.",
+        "techstack": [htmlIcon, cssIcon, jsIcon],
+        "links": [
+            {
+                "name": "VISIT SITE",
+                "url": "https://virtual-wanderer.netlify.app"
+            },
             {
                 "name": "github",
                 "url": "https://github.com/alisapromthep/virtual-wander"

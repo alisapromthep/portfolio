@@ -1,12 +1,13 @@
 import React from 'react';
 import Title from '../Title/Title';
 import Form from '../Form/Form';
-import { Box, IconButton } from '@mui/material';
+import { Box, IconButton, Typography } from '@mui/material';
 import MyLinks from '../MyLinks/MyLinks';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import "./ConnectForm.scss";
 import emailjs from 'emailjs-com';
 import FormSubmit from '../FormSubmit/FormSubmit';
+import emailImg from '../../assets/img/email.png';
 
 
 const ConnectForm = ({contactOpen, setContactOpen, formSubmit, setFormSubmit, }) => {
@@ -56,12 +57,18 @@ const ConnectForm = ({contactOpen, setContactOpen, formSubmit, setFormSubmit, })
                     <Box
                     sx={{
                         display: "flex",
+                        margin: "1rem",
                     }}>
                         {formSubmit ? <FormSubmit/>:<Form handleSubmit={handleSubmit}/>}
                         <Box
                         className="contact__social"
                         >
+                            <Typography>
+                                Connect with me on
+                            </Typography>
                             <MyLinks/>
+                            <img className="contact__img" 
+                            src={emailImg} alt="purple computer monitor with yellow envelope inside"/>
                         </Box>
                     </Box>
                 </div>

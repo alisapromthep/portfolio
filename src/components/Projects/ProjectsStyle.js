@@ -31,11 +31,16 @@ export const ProjectButton = styled(Link)({
 })
 
 export const ProjectTech = styled(ListItem)({
-    width: "4rem",
-    height: "4rem",
-    margin: "1rem 0.2rem",
     backgroundColor: "white",
     borderRadius: "50%",
+    xs:{
+        width: "2rem",
+        height: "2rem"
+    },
+    
+    width: "4rem",
+    height: "4rem",
+    marginRight: "0.5rem"
 
 
 })

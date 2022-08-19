@@ -5,7 +5,7 @@ import HeroImg from '../../assets/img/header-img.svg';
 import { HeroImage, HeroButton } from './HeroStyle';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import ConnectForm from '../ConnectForm/ConnectForm';
-
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 
 const Hero = () => {
@@ -73,6 +73,7 @@ const Hero = () => {
             <Container
             sx={{
                 paddingTop: '4rem',
+                marginBottom: '2rem',
             }}
             >
                 <Grid
@@ -83,17 +84,19 @@ const Hero = () => {
                         <Typography variant='h1'
                         color='primary'
                         sx={{
-                            fontSize: '3rem',
+                            fontSize: {xs: '2rem',sm:'3rem'},
                             fontWeight: '700',
                             textShadow: " 2px 2px 0 #1E2CAB"
                         }}
                         >Hi! I'm Alisa Promthep</Typography>
                         <Typography>{`I'm ${text}`}</Typography>
                         <Typography>Full-stack web developer, with a passion in exploring art and design and the love for databases.</Typography>
-                        <Typography display="block"></Typography>
+                        <Typography display="block">
+                            
+                        </Typography>
                         <HeroButton
                         variant="contained"
-                        endIcon={<FlightTakeoffIcon/>}
+                        endIcon={<RocketLaunchIcon/>}
                         onClick={()=>{
                             setContactOpen(true);
                         }}

@@ -1,20 +1,19 @@
 import React from 'react';
 import './Projects.scss';
 import Title from '../Title/Title';
-import {Container, Typography, CardContent, Stack, Card, List} from '@mui/material';
+import {Container, Typography, CardContent, Stack, Card, List, ListItem} from '@mui/material';
 import {projectData} from '../../data/projectData.js';
 import {ProjectImg, ProjectButton, ProjectTech} from './ProjectsStyle';
-import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 
 
 const Projects = () => {
     return (
     <Container>
-        <Title title="Projects" />
+        <Title title="Projects"/>
         <Stack
         spacing={4}
         sx={{
-            padding: "1rem 4rem",
+            padding: {sm:"1rem 4rem"},
         }}>
                 {
                 projectData.map((project)=>{
@@ -40,7 +39,9 @@ const Projects = () => {
                             >
                                     <Typography 
                                     color="white"
-                                    sx={{fontWeight:"700"}}>
+                                    sx={{fontWeight:"700",
+                                    fontSize:{ xs:"1.2rem",sm:"1.75rem"}
+                                    }}>
                                         {project.name}
                                     </Typography>
                                     <Typography
@@ -49,7 +50,8 @@ const Projects = () => {
                                     </Typography>
                                     <div className='project__detail'>
                                     <List
-                                    sx={{display: "flex"}}
+                                    sx={{display: "flex",
+                                overflow: {xs:"scroll", sm:"inherit"}}}
                                     >
                                         {project.techstack.map((tech,index)=>{
                                             return (
@@ -63,17 +65,30 @@ const Projects = () => {
                                         })
                                     }
                                     </List>
-                                        {project.links.map((link)=>{
+                                    <List
+                                    sx={{
+                                        display: {xs:"flex"},
+                                        justifyContent: {sm:"unset"}
+                                    }}
+                                    >
+                                        {project.links.map((link,index)=>{
                                             return (
-                                                <ProjectButton
-                                                key={link.name}
-                                                href={link.url}
-                                                variant="button"
-                                                target="_blank"
-                                                rel="noopener">{link.name}
-                                                </ProjectButton>
+                                                <ListItem
+                                                sx={{
+                                                    width:{sm:"10rem"},
+                                                    height: {sm:"3rem"},
+                                                }}
+                                                key={index}>
+                                                    <ProjectButton
+                                                    href={link.url}
+                                                    variant="button"
+                                                    target="_blank"
+                                                    rel="noopener">{link.name}
+                                                    </ProjectButton>
+                                                </ListItem>
                                             )
                                         })}
+                                    </List>
                                     </div>
                             </CardContent>
                         </Card>

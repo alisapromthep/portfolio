@@ -1,7 +1,6 @@
 import React from 'react';
 import { TextField, Box, Stack,Button } from '@mui/material';
-import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
-
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 const Form = ({handleSubmit}) => {
     return (
@@ -35,7 +34,7 @@ const Form = ({handleSubmit}) => {
                 placeholder={'Your message. . . '}
                 />
                 <Button variant="outlined" size="small"
-                endIcon={<AirplaneTicketIcon />}
+                endIcon={<RocketLaunchIcon />}
                 sx={{
                     width: "8rem",
                     margin: "0 20%",

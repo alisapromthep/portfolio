@@ -17,9 +17,9 @@ const MyLinks = () => {
                 href="https://www.linkedin.com/in/alisa-promthep/"
                 target="_blank"
                 rel="noopener"
-                color="inherit"
+                color="#1E2CAB"
                 >
-                    <LinkedInIcon color='primary'/>
+                    <LinkedInIcon/>
                 </Link>
             </LinkItem>
             <LinkItem>
@@ -27,9 +27,9 @@ const MyLinks = () => {
                 href="https://github.com/alisapromthep"
                 target="_blank"
                 rel="noopener"
-                color="inherit"
+                color="#1E2CAB"
                 >
-                    <GitHubIcon color='primary'/>
+                    <GitHubIcon color='#1E2CAB'/>
                 </Link>
             </LinkItem>
             <LinkItem>
@@ -37,9 +37,9 @@ const MyLinks = () => {
                 href="https://instagram.com/chemists_freetime"
                 target="_blank"
                 rel="noopener"
-                color="inherit"
+                color="#1E2CAB"
                 >
-                    <InstagramIcon color='primary'/>
+                    <InstagramIcon color='#1E2CAB'/>
                 </Link>
             </LinkItem>
         </List>
