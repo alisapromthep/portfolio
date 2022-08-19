@@ -55,8 +55,9 @@
         cursor: pointer;
         position: relative;
         border-radius: 2rem;
+        width: 100%;
 
-        @include desktop{
+        @include desktop {
             width: 50rem;
         }
 
