@@ -9,8 +9,10 @@ export const projectData = [
         "id": 1,
         "name": "Reaction",
         "img": allergyTrackingHome,
-        "description": "Full-stack web application to help you track your allergies or food intolerance. Incorporating icons, react-calendar and JWT authentication. ",
+        "description": "Full-stack web application to help you track your allergies or food intolerance.",
+        "details": "Allergy log also group each entry by food item for easy look-back and comparison, ",
         "techstack": "Javascript | React | Sass | Css | NodeJs | Express | KnexJS | MySQL ",
+        "tools": "thunder client to test back-end API, host server on heroku. ",
         "links": [
             {
                 "name": "visit site",
@@ -34,8 +36,10 @@ export const projectData = [
         "id": 2,
         "name": "Shutterstock",
         "img": shutterstockHome,
-        "description": "A collaboration between 2 Developers, 3 UX designers and 24 hours.",
+        "description": "Proof of design concept, recreation of shutterstock homepage with additional feature section, and new full feature page.",
+        "details": "24 hours Shutterstock x BrainStation Hackathon collaboration between 3 UX designers and 2 developers.  ",
         "techstack": "Javascript | React | Sass | Css ",
+        "tools": "used git for working simultaneously, figma to guide design",
         "links": [
             {
                 "name":"DEMO",
@@ -75,11 +79,11 @@ export const projectData = [
         "links": [
             {
                 "name": "VISIT SITE",
-                "url": "https://virtual-wanderer.netlify.app"
+                "url": "https://whosthatpokemon-hackathon.netlify.app/"
             },
             {
                 "name": "github",
-                "url": "https://github.com/alisapromthep/virtual-wander"
+                "url": "https://github.com/menu89/whos-that-pokmon"
             },
 
         ]

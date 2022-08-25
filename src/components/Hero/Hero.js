@@ -92,6 +92,7 @@ const Hero = () => {
                         >Hi! I'm Alisa Promthep</Typography>
                         <Typography>{`I'm ${text}`}</Typography>
                         <Typography>Full-stack web developer, with a passion in exploring art and design and the love for databases.</Typography>
+                        {/* Code to improve lives, enable automations and optimize processes */}
                         <Typography display="block">
                             
                         </Typography>

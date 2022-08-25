@@ -1,19 +1,14 @@
 import { styled } from "@mui/material/styles";
-import { CardMedia, CardContent, CardActionArea, Link, ListItem} from "@mui/material";
-import {slide_up} from './ProjectAnimation';
+import { CardMedia, CardActionArea, Link, ListItem} from "@mui/material";
+
 
 
 export const ProjectImg = styled(CardMedia)(({ src, theme }) => ({
     height: "25rem",
     borderRadius: "2rem",
     objectFit: "contain",
+    cursor: "pointer",
 
-    "&:hover .project__detail": {
-        animation: `${slide_up} 2s ease-in-out`,
-        left:'20rem',
-        cursor: "pointer",
-        height:"10rem",
-    }
 }));
 
 

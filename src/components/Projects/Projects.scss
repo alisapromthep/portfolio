@@ -21,9 +21,8 @@
 
     &__label {
         width: 100%;
-        overflow: hidden;
         position: absolute;
-        height: 16rem;
+        height: 17rem;
         bottom: -7rem;
         /* From https://css.glass */
         background: rgba(95, 108, 232, 0.8);
@@ -32,6 +31,8 @@
         -webkit-backdrop-filter: blur(6.8px);
         border-bottom-left-radius: 2rem;
         border-bottom-right-radius: 2rem;
+        transition: all .6s ease-out;
+        
         
         @include tablet {
             height: 16rem;
