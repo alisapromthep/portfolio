@@ -51,9 +51,9 @@ const Projects = () => {
                                         {project.description}
                                     </Typography>
                                     <div className='project__detail'>
-                                    <Typography color="white">
-                                        {project.techstack}
-                                    </Typography>
+                                        <Typography color="white">
+                                            {project.techstack}
+                                        </Typography>
                                     <List
                                     sx={{
                                         display: "flex",

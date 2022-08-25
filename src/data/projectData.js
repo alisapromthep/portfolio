@@ -9,10 +9,8 @@ export const projectData = [
         "id": 1,
         "name": "Reaction",
         "img": allergyTrackingHome,
-        "description": "Full-stack web application to help you track your allergies or food intolerance.",
-        "details": "Allergy log also group each entry by food item for easy look-back and comparison, ",
-        "techstack": "Javascript | React | Sass | Css | NodeJs | Express | KnexJS | MySQL ",
-        "tools": "thunder client to test back-end API, host server on heroku. ",
+        "description": "Full-stack web application to help you track your allergies or food intolerance, with logs organized by type of food for easy comparison. ",
+        "techstack": "Javascript | React | SASS | CSS | NodeJs | Express | KnexJS | MySQL ",
         "links": [
             {
                 "name": "visit site",
@@ -36,9 +34,8 @@ export const projectData = [
         "id": 2,
         "name": "Shutterstock",
         "img": shutterstockHome,
-        "description": "Proof of design concept, recreation of shutterstock homepage with additional feature section, and new full feature page.",
-        "details": "24 hours Shutterstock x BrainStation Hackathon collaboration between 3 UX designers and 2 developers.  ",
-        "techstack": "Javascript | React | Sass | Css ",
+        "description": "A recreation of shutterstock homepage with additional feature section, and new full feature page, as proof of design concept for a 24 hours cross-collaboration hackathon with UX Designers ",
+        "techstack": "Javascript | React | SASS | CSS  ",
         "tools": "used git for working simultaneously, figma to guide design",
         "links": [
             {
@@ -56,8 +53,8 @@ export const projectData = [
         "id": 3,
         "name": "Virtual Wanderer",
         "img": virtualWanderHome,
-        "description": "24hours pair-programming: This is a full stack web application that takes you wandering through pre-picked youtube videos.",
-        "techstack": "Javascript | React | Sass | Css | NodeJs | Express ",
+        "description": "24hours pair-programming: A full stack web application that takes you on a walk or a bike ride through pre-picked youtube videos.",
+        "techstack": "Javascript | React | SASS | CSS | NodeJs | Express ",
         "links": [
             {
                 "name": "VISIT SITE",
@@ -75,7 +72,7 @@ export const projectData = [
         "name": "Who's that Pokemon",
         "img": whosthatpokemonHome,
         "description": "24 hours hackathon using Pokemon API and vanila javascript to create whos that pokemon game.",
-        "techstack": "Javascript | Sass | Css  ",
+        "techstack": "Javascript | SASS | CSS  ",
         "links": [
             {
                 "name": "VISIT SITE",
